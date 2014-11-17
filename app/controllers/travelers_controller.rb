@@ -1,6 +1,6 @@
 class TravelersController < ApplicationController
 
-		def index
+	def index
 	end
 
 	def create
@@ -20,5 +20,5 @@ class TravelersController < ApplicationController
 
 	def destroy
 	end
-	
+
 end
