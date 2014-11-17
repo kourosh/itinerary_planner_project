@@ -1,10 +1,14 @@
+<a href="/itineraries/new">Add an itinerary</a>
+
 <div>
-	<% @itinerary.each do |i| %>
-		<%= i.name %>
-		<%= i.origin %>
-		<%= i.dep_date %>
-		<%= i.destination %>
-		<%= i.ret_date %>
+	<% @itineraries.each do |i| %>
+		<a href="itineraries/<%= i.id %>"><h1><%= i.name %></h1></a>
+		<h2><%= i.origin %> departure on <%= i.dep_date %>.</h2>
+		<h2>Destination <%= i.destination %>.</h2>
+			
+
+		<p>Returning on <%= i.ret_date %>.</p>
+		<hr />
 	<% end %>
 
 

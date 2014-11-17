@@ -1,0 +1,8 @@
+<%= simple_form_for @itinerary, method: "put" do |i| %>
+	<%= i.input :name, value: [:name] %>
+	<%= i.input :origin, value: [:origin] %>
+	<%= i.input :dep_date, value: [:dep_date] %>
+	<%= i.input :destination, value: [:origin] %>
+	<%= i.input :dep_date, value: [:dep_date] %>
+	<%= submit_tag("Edit Itinerary") %>
+<% end %>

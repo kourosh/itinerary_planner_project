@@ -1,5 +1,14 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
 <div>
-	<p><%= @itinerary.name %></p>
+	<h1><%= @itinerary.name %></h1>
+	<ul>
+		<li><a href="/itineraries/<%= @itinerary.id %>/edit">Edit Trip</a></li> 
+		<li><a href="/itineraries/">Add Waypoints</a></li> 
+		<li><a href="/itineraries/delete">Delete Trip</a></li>
+	</ul>
 	<p>Leaving <%= @itinerary.origin %> on <%= @itinerary.dep_date %></p>
 	<p>Destination: <%= @itinerary.destination %></p>
 	<p>Returning on <%= @itinerary.ret_date %></p>

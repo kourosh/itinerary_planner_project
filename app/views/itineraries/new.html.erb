@@ -2,9 +2,9 @@
 	<%= simple_form_for @itinerary do |i| %>
 		<%= i.input :name %>
 		<%= i.input :origin %>
-		<%= i.input :dep_date %>
+		<%= i.input :dep_date, order: [:month, :day, :year] %>
 		<%= i.input :destination %>
-		<%= i.input :ret_date %>
+		<%= i.input :ret_date, order: [:month, :day, :year] %>
 		<%= i.submit "Create" %>
 	<% end %>
 </div>
