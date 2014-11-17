@@ -5,9 +5,9 @@
 <div>
 	<h1><%= @itinerary.name %></h1>
 	<ul>
+		<li><a href="/">Home</a></li>
 		<li><a href="/itineraries/<%= @itinerary.id %>/edit">Edit Trip</a></li> 
 		<li><a href="/itineraries/">Add Waypoints</a></li> 
-		<li><a href="/itineraries/delete">Delete Trip</a></li>
 	</ul>
 	<p>Leaving <%= @itinerary.origin %> on <%= @itinerary.dep_date %></p>
 	<p>Destination: <%= @itinerary.destination %></p>

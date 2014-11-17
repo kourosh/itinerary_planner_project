@@ -28,12 +28,19 @@ class ItinerariesController < ApplicationController
 	end
 
 	def update
-		itinerary = Itinerary.find(params[:id])
+		if params[:delete]
+			destroy
+		else
+			itinerary = Itinerary.find(params[:id])
 			itinerary.update(itin_params)
 			redirect_to "/"
+		end
 	end
 
 	def destroy
+		itinerary = Itinerary.find(params[:id])
+		itinerary.destroy
+		redirect_to "/"
 	end
 
 
